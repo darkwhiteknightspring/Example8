@@ -1,5 +1,12 @@
 package com.example.beans;
 
+/*
+
+    We should prefer using constructor autowiring over all the other autowiring
+    as here can mentioned the field as final if we don't want the value to chang over time.
+    If some bean is not there in the context and still want to autowire with it and don't want an exception to be raise we
+    need to use the required = false in the autowire annotation.
+ */
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -66,7 +73,4 @@ public class Person {
         this.vehicle = vehicle;
     }
 
-//    public Person(){
-//        System.out.println("Person created by spring");
-//    }
 }
